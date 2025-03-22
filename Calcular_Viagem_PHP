@@ -13,6 +13,8 @@
     $quantLitros = round($quantLitros, 2);
     $totalViagem = round($totalViagem, 2);
     
-     echo "A quantidade de litros gastos para a sua viagem será de: ".$quantLitros." litros. \n";  
-     echo "O valor total gasto para sua viagem será de: R$ ".$totalViagem.".";  
+    echo("\n");
+    
+    echo "A quantidade de litros gastos para a sua viagem será de: ".$quantLitros." litros. \n";  
+    echo "O valor total gasto para sua viagem será de: R$ ".$totalViagem.".";  
 ?>
