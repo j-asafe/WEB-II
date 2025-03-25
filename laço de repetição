@@ -1,0 +1,16 @@
+<?php
+
+echo "Crie uma senha";
+    $senha = readline ();
+
+do{ 
+    echo "faça login com a senha criada";
+        $senhaCorreta = readline ();
+    
+        if ($senhaCorreta != $senha){
+            echo "Senha incorreta! Tente novamente";
+        }
+} while ($senha != $senhaCorreta);
+    echo "Acesso Liberado!";
+
+
