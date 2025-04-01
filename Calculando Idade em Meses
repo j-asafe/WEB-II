@@ -1,0 +1,18 @@
+<?php
+function conta($data, $dataAtual){
+    $dataNascimento = DateTime::createFromFormat('d/m/Y', $data);
+
+    if (!$dataNascimento) 
+    {
+      return "Erro: Formato de data inválido. Use o formato dd/mm/aaaa.";
+    }
+    $dataAtualObj = new DateTime($dataAtual);
+    $diferenca = $dataNascimento->diff($dataAtualObj);
+    return ($diferenca->y * 12) + $diferenca->m;
+}
+echo "Digite sua data de nascimento: (dd/mm/aaaa)\n";
+$data = readline();
+$dataAtual = date('d/m/Y');
+$resultado = conta($data, $dataAtual);
+
+echo "A diferença em meses é: " . $resultado . "\n";
